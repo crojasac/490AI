@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI490 Portfolio — Projects</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #18181b;
+      --accent: #6366f1;
+      --text: #f3f4f6;
+      --card: #23232a;
+      --border: #2d2d34;
+      --link: #60a5fa;
+    }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      background: var(--primary);
+      color: var(--text);
+      font-family: 'Inter', system-ui, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      width: 100%;
+      background: var(--card);
+      border-bottom: 1px solid var(--border);
+      padding: 0 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .brand {
+      font-weight: 700;
+      font-size: 1.5em;
+      color: var(--accent);
+      letter-spacing: 1px;
+    }
+    nav a {
+      color: var(--link);
+      text-decoration: none;
+      font-weight: 500;
+      margin-left: 32px;
+      transition: color .2s;
+    }
+    nav a:hover {
+      color: var(--accent);
+    }
+    .container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 48px 16px 0 16px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 40px 32px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+      width: 100%;
+      margin-bottom: 32px;
+    }
+    h1 {
+      color: var(--accent);
+      font-size: 2em;
+      margin-bottom: 18px;
+      font-weight: 700;
+    }
+    .project {
+      margin-bottom: 32px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    .project:last-child {
+      border-bottom: none;
+    }
+    .project-title {
+      font-size: 1.25em;
+      color: var(--accent);
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+    .project-desc {
+      color: #cbd5e1;
+      margin-bottom: 8px;
+      font-size: 1.08em;
+    }
+    .project-links a {
+      color: var(--link);
+      text-decoration: underline;
+      margin-right: 16px;
+      font-size: 1em;
+      font-weight: 500;
+      transition: color .2s;
+    }
+    .project-links a:hover {
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">AI490 Portfolio</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="CV.pdf" target="_blank">CV</a>
+    </nav>
+  </header>
+  <div class="container">
+    <div class="card">
+      <h1>Projects</h1>
+      <div class="project">
+        <div class="project-title">Project 1: Word Cloud</div>
+        <div class="project-desc">We used students' "dream objectives about the class" from an AI course to generate a word cloud. This visualization highlights the most common aspirations and interests among the students.</div>
+        <div class="project-links">
+          <a href="wordcloud.py" target="_blank">Python Code</a>
+          <a href="wordcloud.png" target="_blank">Generated Word Cloud (PNG)</a>
+        </div>
+          <div class="project-code">
+            <h3>Python Code Snippet</h3>
+            <pre><code class="language-python"># Example: wordcloud.py
+  import matplotlib.pyplot as plt
+  from wordcloud import WordCloud
+
+  text = "AI class dream objectives..."
+  wordcloud = WordCloud().generate(text)
+  plt.imshow(wordcloud, interpolation='bilinear')
+  plt.axis("off")
+  plt.savefig("wordcloud.png")
+  </code></pre>
+          </div>
+      </div>
+      <!-- Add more projects below as needed -->
+    </div>
+  </div>
+  <footer>
+    &copy; 2025 Your Name. All rights reserved.
+  </footer>
+</body>
+</html>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
